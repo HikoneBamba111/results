@@ -14,6 +14,9 @@
       <p>内容１</p>
 
       <div id="install"></div>
+
+      <div id="advertise"></div>
+      
     </main>
 
     <div id="footer"></div>
@@ -28,6 +31,9 @@
       fetch("install.htm")
         .then((response) => response.text())
         .then((data) => document.querySelector("#install").innerHTML = data);
+      fetch("advertise.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#advertise").innerHTML = data);
 
     </script>
 
