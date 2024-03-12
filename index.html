@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+
+  <head>
+    <meta charset="utf-8">
+    <title>トップページ</title>
+  </head>
+
+  <body>
+
+　　<div id="header"></div>
+テスト
+    <main>
+      <p>内容１</p>
+    </main>
+
+    <div id="footer"></div>
+    
+    <script>
+      fetch("header.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#header").innerHTML = data);
+      fetch("footer.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#footer").innerHTML = data);
+    </script>
+
+  </body>
+
+</html>
