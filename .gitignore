@@ -1,6 +1,8 @@
 # original setting 
 *.docx
-.~1~
+*.doc
+*.xlsx
+*.~1~
 
 
 # Byte-compiled / optimized / DLL files
