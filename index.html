@@ -16,9 +16,9 @@
 
     <main>
       <p>  手順書　</p>
-      <p>  余白　</p>
-      <p>  　　　　　　　　</p>
-      <p>  　　　　　　　　</p>
+      <!-- <p>  余白　</p> -->
+      <!-- <p>  　　　　　　　　</p> -->
+      <!-- <p>  　　　　　　　　</p> -->
 
 <!-- <p> -->
   <!-- ここで、<a href="install.htm">Anaconda をinstall</a>します。 -->
@@ -35,7 +35,17 @@
       
 <!-- ID付けできれば、JavaScriptで日本語Wordファイルを同一ページに動的に取り込むことも可能。 -->
 
+      <h1> Anaconda とtensorflow パッケージのインストール </h1> 
       <div id="anaconda_tensorflow"></div>  <!-- "installl.htm" --> 
+
+      <h1> 日本語環境とPythonローカル・パス設定 </h1> 
+      <div id="japanese_env"></div>  <!-- "installl.htm" --> 
+
+      <h1> Pythonパッケージのインストール </h1> 
+      <div id="package_install"></div>  
+
+      <h1> 講義用GitHubへのアクセス </h1> 
+      <div id="github"></div>  
 
       <!-- <div id="advertise"></div> -->
       
@@ -56,6 +66,15 @@
       fetch("anaconda_tensorflow.htm")
         .then((response) => response.text())
         .then((data) => document.querySelector("#anaconda_tensorflow").innerHTML = data);
+      fetch("japanese_env.htm")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#japanese_env").innerHTML = data);
+      fetch("package_install.htm")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#package_install").innerHTML = data);
+      fetch("github.htm")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#github").innerHTML = data);
 
     </script>
       <!-- fetch("advertise.html") -->
