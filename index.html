@@ -13,17 +13,20 @@
   <body>
 
 　　<div id="header"></div>
-テスト
+
     <main>
-      <p>内容１</p>
+      <p>  手順書　</p>
+      <p>  余白　</p>
+      <p>  　　　　　　　　</p>
+      <p>  　　　　　　　　</p>
 
 <!-- <p> -->
   <!-- ここで、<a href="install.htm">Anaconda をinstall</a>します。 -->
 <!-- </p> -->
 <!-- 日本語Wordから作成した別ファイルによるHTML文書を参照可能 -->
-<p>
-  ここで、<a href="手順.htm">Anaconda をinstall</a>します。
-</p>
+<!-- <p> -->
+  <!-- ここで、<a href="手順.htm">Anaconda をinstall</a>します。 -->
+<!-- </p> -->
 
 
 <!-- <p> -->
@@ -31,7 +34,8 @@
 <!-- </p> -->
       
 <!-- ID付けできれば、JavaScriptで日本語Wordファイルを同一ページに動的に取り込むことも可能。 -->
-      <div id="installl"></div>
+
+      <div id="anaconda_tensorflow"></div>  <!-- "installl.htm" --> 
 
       <!-- <div id="advertise"></div> -->
       
@@ -49,9 +53,9 @@
       fetch("install.htm")
         .then((response) => response.text())
         .then((data) => document.querySelector("#install").innerHTML = data);
-      fetch("手順.htm")
+      fetch("anaconda_tensorflow.htm")
         .then((response) => response.text())
-        .then((data) => document.querySelector("#installl").innerHTML = data);
+        .then((data) => document.querySelector("#anaconda_tensorflow").innerHTML = data);
 
     </script>
       <!-- fetch("advertise.html") -->
