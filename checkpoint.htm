@@ -22,9 +22,9 @@
 	{font-family:"ＭＳ Ｐゴシック";
 	panose-1:2 11 6 0 7 2 5 8 2 4;}
 @font-face
-	{font-family:"\@游明朝";}
-@font-face
 	{font-family:"\@游ゴシック Light";}
+@font-face
+	{font-family:"\@游明朝";}
 @font-face
 	{font-family:"\@ＭＳ Ｐゴシック";}
  /* Style Definitions */
@@ -121,11 +121,12 @@ text-justify-trim:punctuation'>
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>Anaconda</span>仮想環境機能を用いると、利用するパッケージの組み合わせ、<span
-lang=EN-US>version</span>などが異なる別々の環境を複数作成でき、ユーザーはそれらを切替えて使える。</p>
+lang=EN-US>version</span>などが異なる別々の分析環境を複数作成でき、ユーザーは分析目的別にそれらを切替えて使える。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal>自分がこれまで構築した<span lang=EN-US>conda</span>仮想環境をリスト：</p>
+<p class=MsoNormal>自分がこれまで構築した<span lang=EN-US>conda</span>仮想環境をリスト：（今回、初構築の場合は<span
+lang=EN-US>py10</span>のみ）</p>
 
 <p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span
 lang=EN-US style='font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;
@@ -145,14 +146,18 @@ lang=EN-US style='font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Ro
 <p class=MsoNormal><span lang=EN-US><img width=566 height=49
 src="checkpoint.files/image002.png"></span></p>
 
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><b><span lang=EN-US>2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></b><b>インストール済パッケージの<span lang=EN-US>python</span>内での正常動作確認</b></h1>
+
 <p class=MsoNormal><span lang=EN-US>shell prompt</span>上で、<span lang=EN-US>ipython</span>コマンドを起動：　（→　<span
 lang=EN-US>exit() </span>で退出）</p>
 
 <p class=MsoNormal><span lang=EN-US><img width=567 height=116
 src="checkpoint.files/image003.png" alt="テキスト&#10;&#10;自動的に生成された説明"></span></p>
 
-<p class=MsoNormal><span lang=EN-US>python/ipython</span>はフロントエンドの違いだけ<span
-lang=EN-US>.</span></p>
+<p class=MsoNormal>（<span lang=EN-US>python/ipython</span>はフロントエンドの違いだけ）</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
@@ -164,7 +169,7 @@ alt="グラフィカル ユーザー インターフェイス が含まれてい
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal>インストールしてない仮想環境下で<span lang=EN-US>import</span>できない<span
+<p class=MsoNormal>もしもインストールしてない仮想環境下だと、<span lang=EN-US>import</span>できない<span
 lang=EN-US>: </span></p>
 
 <p class=MsoNormal><span lang=EN-US><img width=567 height=254
@@ -180,11 +185,14 @@ alt="グラフィカル ユーザー インターフェイス, テキスト, ア
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal>同様にして、事後的インストール対象パッケージの正常<span lang=EN-US>import</span>を確認する</p>
+<p class=MsoNormal>同様にして、他の事後的インストール対象パッケージの正常<span lang=EN-US>import</span>を確認する</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal>続いて本講義オリジナルのローカル・パッケージ：<span lang=EN-US>biwako</span>　の正常インストール確認：</p>
+<h1><b><span lang=EN-US>3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></b><b>オリジナル・パッケージの正常動作確認</b></h1>
+
+<p class=MsoNormal>続いて本講義オリジナルのローカル・パッケージ：<span lang=EN-US>biwako</span>　の正常インストールを確認：</p>
 
 <p class=MsoNormal><span lang=EN-US><img width=466 height=115
 src="checkpoint.files/image007.png"
@@ -192,23 +200,81 @@ alt="グラフィカル ユーザー インターフェイス, テキスト, ア
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
-<p class=MsoNormal><span lang=EN-US>Error</span>の場合には、<span lang=EN-US>GitHub</span>からの<span
+<p class=MsoNormal>もしも<span lang=EN-US>Error</span>の場合には、<span lang=EN-US>GitHub</span>からの<span
 lang=EN-US>biwako</span>フォルダのダウンロード先と、環境変数<span lang=EN-US>PYTHONPATH</span>　の連携が崩れている可能性あり<span
 lang=EN-US>.</span></p>
 
-<p class=MsoNormal>その場合は、環境変数<span lang=EN-US>PYTHONPATH</span>の値を再確認：　そのパスの先に<span
+<p class=MsoNormal>その場合は、環境変数<span lang=EN-US>PYTHONPATH</span>の値を再確認：　そのパスの先にダウンロードした<span
 lang=EN-US>biwako</span>パッケージが存在してるか？</p>
 
 <p class=MsoNormal><span lang=EN-US><img width=567 height=76
 src="checkpoint.files/image008.png"
 alt="グラフィカル ユーザー インターフェイス, テキスト&#10;&#10;自動的に生成された説明"></span><span lang=EN-US>or</span>　　　　　　　<span
-lang=EN-US><img width=567 height=129 id="図 1"
-src="checkpoint.files/image009.png"
+lang=EN-US><img width=567 height=129 src="checkpoint.files/image009.png"
 alt="グラフィカル ユーザー インターフェイス, テキスト&#10;&#10;自動的に生成された説明"></span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><b><span lang=EN-US>4<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></b><b>作業用フォルダ（ディレクトリ）上での作業環境を確認</b></h1>
+
+<p class=MsoNormal>本講義用作業用フォルダを決め、講義時にはそこへ<span lang=EN-US>current directory</span>を移して作業を行う。</p>
+
+<p class=MsoNormal>練習用プログラムは、その作業用フォルダ（ディレクトリ）内にダウンロードするようにする<span lang=EN-US>.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>current directory</span>をチェンジする：</p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-US>cd  (</span>作業用フォルダ<span lang=EN-US>)</span></p>
+
+<p class=MsoNormal><span lang=EN-US><img width=567 height=114
+src="checkpoint.files/image010.png" alt="テキスト&#10;&#10;自動的に生成された説明"></span></p>
+
+<p class=MsoNormal>（空白を含むパス名の場合には、括弧で囲む）</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>作業用フォルダ内に、<span lang=EN-US>repository</span>から<span
+lang=EN-US>download</span>した<span lang=EN-US>program </span>が存在することを確認：</p>
+
+<p class=MsoListParagraph style='margin-left:18.0pt;text-indent:-18.0pt'><span
+lang=EN-US style='font-family:Wingdings'>Ø<span style='font:7.0pt "Times New Roman"'>&nbsp;
+</span></span><span lang=EN-US>dir  </span>（ <span lang=EN-US>or</span>　 <span
+lang=EN-US>‘ls’</span>）</p>
+
+<p class=MsoNormal><span lang=EN-US><img width=567 height=166
+src="checkpoint.files/image011.png" alt="テキスト&#10;&#10;自動的に生成された説明"></span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>お試し<span lang=EN-US>program </span>の実行：</p>
+
+<p class=MsoNormal><span lang=EN-US><img width=567 height=166 id="図 1"
+src="checkpoint.files/image012.png" alt="テキスト&#10;&#10;自動的に生成された説明"></span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><b><span lang=EN-US>5<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></b><b>各自の属人的なフロントエンド環境の準備</b></h1>
+
+<p class=MsoNormal>授業では<span lang=EN-US>python</span>実行環境を統一すること以外の作業環境へ干渉しない。すなわち<span
+lang=EN-US>python</span>の起動法、<span lang=EN-US>program</span>の編集法などに対して干渉しないため、以下の項目に関して各自の方針を決め、それに基づいて作業ができるように準備しておくこと：</p>
+
+<p class=MsoListParagraphCxSpFirst style='margin-left:22.0pt;text-indent:-22.0pt'><span
+lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span><span lang=EN-US>python</span>の起動法：　原始的には上記コマンドライン上からの起動でよい。</p>
+
+<p class=MsoListParagraphCxSpLast style='margin-left:22.0pt;text-indent:-22.0pt'><span
+lang=EN-US style='font-family:Wingdings'>l<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;
+</span></span>ファイルの編集法： 使い慣れたテキスト・エディタがあればそれを利用できるようにしておく。なければ、<span
+lang=EN-US>windows</span>のメモ帳でも可能。</p>
 
 <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
 
