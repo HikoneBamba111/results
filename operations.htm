@@ -1,0 +1,175 @@
+<html>
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:"游ゴシック Light";
+	panose-1:2 11 3 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:游明朝;
+	panose-1:2 2 4 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"ＭＳ Ｐゴシック";
+	panose-1:2 11 6 0 7 2 5 8 2 4;}
+@font-face
+	{font-family:"\@游明朝";}
+@font-face
+	{font-family:"\@游ゴシック Light";}
+@font-face
+	{font-family:"\@ＭＳ Ｐゴシック";}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0mm;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	font-size:10.5pt;
+	font-family:"游明朝",serif;}
+h1
+	{mso-style-link:"見出し 1 \(文字\)";
+	margin-top:14.0pt;
+	margin-right:0mm;
+	margin-bottom:4.0pt;
+	margin-left:21.25pt;
+	text-align:justify;
+	text-justify:inter-ideograph;
+	text-indent:-21.25pt;
+	page-break-after:avoid;
+	font-size:16.0pt;
+	font-family:"游ゴシック Light";
+	color:black;
+	font-weight:normal;}
+a:link, span.MsoHyperlink
+	{color:#467886;
+	text-decoration:underline;}
+span.1
+	{mso-style-name:"見出し 1 \(文字\)";
+	mso-style-link:"見出し 1";
+	font-family:"游ゴシック Light";
+	color:black;}
+.MsoChpDefault
+	{font-family:"游明朝",serif;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:595.3pt 841.9pt;
+	margin:99.25pt 30.0mm 30.0mm 30.0mm;
+	layout-grid:18.25pt;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0mm;}
+ul
+	{margin-bottom:0mm;}
+-->
+</style>
+
+</head>
+
+<body lang=JA link="#467886" vlink="#96607D" style='word-wrap:break-word;
+text-justify-trim:punctuation'>
+
+<div class=WordSection1 style='layout-grid:18.25pt'>
+
+<p class=MsoNormal><a name="_Hlk162901577">一連のドキュメントは主に学部向け機械学習講義用であり、機械学習ライブラリ<span
+lang=EN-US>(TensorFlow)</span>利用環境構築向けなため、その他の講義用の場合、構築対象環境が異なるため、ベースとなる設定の適宜読み替えが必要となる。</a></p>
+
+<h1><b><span lang=EN-US>1<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></b><b><span lang=EN-US>Anaconda </span>の<span lang=EN-US>py12</span>環境の構築
+</b></h1>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Top</span>ページの「<span lang=EN-US>Anaconda </span>と<span
+lang=EN-US>tensorflow </span>パッケージのインストール」リンク中：</p>
+
+<p class=MsoNormal><span lang=EN-US>tensorflow</span>パッケージは機械学習用で、オペレーションズ・リサーチ講義受講用の場合には不要。</p>
+
+<p class=MsoNormal>そのため、<span lang=EN-US>Python</span>は古いバージョン、<span
+lang=EN-US>python 3.10 </span>に制限する必要がなくなり、現行安定バージョンの<span lang=EN-US>python 3.12
+</span>環境としたい。</p>
+
+<p class=MsoNormal>よって、マニュアル中の、「<span lang=EN-US>py10</span>」（<span lang=EN-US>python
+3.10.xx</span>用）の文字は全て「<span lang=EN-US>py12</span>」（<span lang=EN-US>python
+3.12.xx</span>用）に読み替えて環境構築すべし<span lang=EN-US>, i.e., conda </span>環境は<span
+lang=EN-US>py10 </span>ではなく、<span lang=EN-US>py12 </span>を作成する<span lang=EN-US>.</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><b><span lang=EN-US>2<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></b><b>インストール対象<span lang=EN-US>python</span>パッケージについて </b></h1>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Top</span>ページの「<span lang=EN-US>Python</span>パッケージのインストール」リンク中：</p>
+
+<p class=MsoNormal>外部<span lang=EN-US>packages</span>インストール対象は以下のリストとする（<span
+lang=EN-US>Anaconda Powersell Prompt</span>上での実行コマンド）：</p>
+
+<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;border:none'>
+ <tr>
+  <td width=56 valign=top style='width:42.3pt;border:solid windowtext 1.0pt;
+  padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+  </td>
+  <td width=510 valign=top style='width:382.4pt;border:solid windowtext 1.0pt;
+  border-left:none;padding:0mm 5.4pt 0mm 5.4pt'>
+  <p class=MsoNormal><span lang=EN-US>conda install conda-forge::ipython</span></p>
+  <p class=MsoNormal><span lang=EN-US>conda install conda-forge::pandas</span></p>
+  <p class=MsoNormal><span lang=EN-US>conda install conda-forge::scikit-learn</span></p>
+  <p class=MsoNormal><span lang=EN-US>conda install conda-forge::cvxpy</span>　</p>
+  <p class=MsoNormal><span lang=EN-US>conda install conda-forge::networkx</span></p>
+  <p class=MsoNormal><span lang=EN-US>conda install
+  conda-forge::sympy_plot_backends</span></p>
+  <p class=MsoNormal><span lang=EN-US>conda install nrtrmp::japanize-matplotlib</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<h1><b><span lang=EN-US>3<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;
+</span></span></b><b>インストール対象<span lang=EN-US>python</span>パッケージについて </b></h1>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>Top</span>ページの「講義用<span lang=EN-US>GitHub</span>へのアクセス」リンク中：</p>
+
+<p class=MsoNormal>講義用<span lang=EN-US>repository</span>はアクセス先が機械学習用とは異なります。</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>「本講義用<span lang=EN-US>repository</span>：<span lang=EN-US><a
+href="https://github.com/HikoneBamba111/DeepLearning">https://github.com/HikoneBamba111/DeepLearning</a></span>」</p>
+
+<p class=MsoNormal>の部分は、適宜、</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal>と読み替えてアクセスすべし。</p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+<p class=MsoNormal><span lang=EN-US>&nbsp;</span></p>
+
+</div>
+
+</body>
+
+</html>
